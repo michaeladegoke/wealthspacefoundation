@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-    $conn = mysqli_connect("localhost", "root", "secret", "wsf_db");
+    //$conn = mysqli_connect("localhost", "root", "secret", "wsf_db");
+    require 'config/database.php';
 
     if (isset($_POST['submit'])) {
         $errors = "";

@@ -8,7 +8,6 @@ if (!isset($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
-// Rest of your code...
 ?>
 
 <!DOCTYPE html>

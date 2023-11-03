@@ -9,7 +9,6 @@ if (!isset($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
-// Rest of your code...
 ?>
 
 
@@ -74,10 +73,6 @@ $username = $_SESSION['username'];
       </div>
     </nav>
   </header>
-
-
-
-
   <?php
   // $sql = "SELECT * FROM member_table WHERE username = '$username'";
   // $result = mysqli_query($conn, $sql);
@@ -148,8 +143,6 @@ $username = $_SESSION['username'];
                   <!-- Content for the second row in the left column -->
                   <!--<img src="<//?//php// echo '<tr><td>' . $image . '<td></tr>'; ?>" alt="" class="img-fluid rounded-circle"> -->
                   <img src="<?php echo $image; ?>" alt="image" class="img-fluid rounded-circle">
-
-
                 </div>
               </div>
               <div class="row Adminrowinner">
