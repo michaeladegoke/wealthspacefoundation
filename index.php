@@ -176,9 +176,9 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                             <img class="card-img-top" src="<?php echo $item['image3'] ?>" alt="book review">
                             <div class="card-body over">
                                 <h5 class="card-title"><?php echo $item['heading3']; ?></h5>
-                                <p class="card-text"><?php echo $item['paragraph31']; ?></< /p>
-                                <p class="card-text"><?php echo $item['paragraph32']; ?></< /p>
-                                <p class="card-text"><?php echo $item['paragraph33']; ?></< /p>
+                                <p class="card-text"><?php echo $item['paragraph31']; ?></p>
+                                <p class="card-text"><?php echo $item['paragraph32']; ?></p>
+                                <p class="card-text"><?php echo $item['paragraph33']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -186,10 +186,10 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         <div class="card text-center mb-3">
                             <img class="card-img-top" src="<?php echo $item['image4']; ?>" alt="women empowerment">
                             <div class="card-body over">
-                                <h5 class="card-title"><?php echo $item['heading4']; ?></< /h5>
-                                    <p class="card-text"><?php echo $item['paragraph41']; ?></< /p>
-                                    <p class="card-text"><?php echo $item['paragraph42']; ?></< /p>
-                                    <p class="card-text"><?php echo $item['paragraph43']; ?></< /p>
+                                <h5 class="card-title"><?php echo $item['heading4']; ?></h5>
+                                <p class="card-text"><?php echo $item['paragraph41']; ?></p>
+                                <p class="card-text"><?php echo $item['paragraph42']; ?></p>
+                                <p class="card-text"><?php echo $item['paragraph43']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -197,10 +197,10 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         <div class="card text-center mb-3">
                             <img class="card-img-top img-fluid" src="<?php echo $item['image5']; ?>" alt="Green technology">
                             <div class="card-body over">
-                                <h5 class="card-title"><?php echo $item['heading5']; ?></< /h5>
-                                    <p class="card-text"><?php echo $item['paragraph51']; ?></<p>
-                                    <p class="card-text"><?php echo $item['paragraph52']; ?></< /p>
-                                    <p class="card-text"><?php echo $item['paragraph53']; ?></< /p>
+                                <h5 class="card-title"><?php echo $item['heading5']; ?></h5>
+                                <p class="card-text"><?php echo $item['paragraph51']; ?></p>
+                                <p class="card-text"><?php echo $item['paragraph52']; ?></p>
+                                <p class="card-text"><?php echo $item['paragraph53']; ?></p>
                             </div>
                         </div>
                     </div>

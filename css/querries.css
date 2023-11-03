@@ -16,7 +16,7 @@ h1{
 }
 
 /*small tablet to big tablet*/
-@media only screen and (max-width: 1023.33px) {
+@media only screen and (max-width: 1023px) {
     @keyframes slideLeft {
         from {
             transform: translateX(4%);
@@ -27,11 +27,33 @@ h1{
         }
     }
 
+    h1 {
+        font-size: 160%;
+        font-weight: 800;
+    }
+
     .section-testimonial .card .box.back .fa-quote-left {
         position: absolute;
         top: 25px;
         left: 125px;
         font-size: 3.2rem;
+    }
+    h2 {
+        font-size: 130%;
+    }
+
+    #program .card-img-top {
+        object-fit: cover; width: 100%;
+        height: 100px;
+    }
+
+    #team .card-img-top {
+        object-fit: cover; width: 100%; height: 250px;
+    }
+
+    .section-about-us p {
+        font-size: 95%;
+        line-height: 140%;
     }
 
     .adminrow {
@@ -67,11 +89,6 @@ input[type=submit] {
     transform: translateY(-55%); /* Adjust for vertical centering */
 }
 
-
-h1{
-    font-size: 190%;
-}
-
 .card-img-top {
     object-fit: cover; width: 100%; height: 300px;
     
@@ -82,6 +99,11 @@ h1{
 
 @media only screen and (max-width: 992px){
 
+    #program .card-img-top {
+        object-fit: cover; width: 100%;
+        height: auto;
+    }
+
     .center-mobile-view {
         text-align: center;
         margin: 0 auto;
@@ -90,11 +112,21 @@ h1{
         font-size: 150%;
         margin-bottom: 2rem;
        }
+
+       #team .card-img-top {
+        object-fit: cover; width: 100%; height: 400px;
+    }
     
 }
 
 /*small phone to small tablet*/
-@media only screen and (max-width: 767.78px) {
+@media only screen and (max-width: 767px) {
+
+    #program .card-img-top {
+        object-fit: cover; width: 100%;
+        height: auto;
+    }
+
     .mainnav li:hover,
 .mainnav li:visited {
  border-bottom: 2px solid transparent;
@@ -133,7 +165,7 @@ header{
 }
 
 h2 {
-    font-size: 150%;
+    font-size: 110%;
     margin-bottom: 2rem;
    }
 
@@ -179,10 +211,18 @@ h2 {
     left: 240px;
     font-size: 3.2rem;
 }
+#team .card-img-top {
+    object-fit: cover; width: 100%; height: 400px;
+}
 }
 
 /*small phone from 480px*/
-@media only screen and (max-width: 555.56px) {
+@media only screen and (max-width: 480px) {
+
+    #program .card-img-top {
+        object-fit: cover; width: 100%;
+        height: auto;
+    }
 
     .mainnav li:hover,
 .mainnav li:visited {
@@ -198,6 +238,16 @@ h2 {
 
 header{
     height: 125vh;
+}
+h1 {
+    font-size: 150%;
+}
+h2 {
+    font-size: 120%;
+}
+
+#team .card-img-top {
+    object-fit: cover; width: 100%; height: 400px;
 }
     
 }
