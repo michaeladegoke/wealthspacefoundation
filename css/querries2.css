@@ -1,0 +1,140 @@
+/*Big tablet to 1200*/
+@media only screen and (max-width: 1200px) {
+    
+    }
+    
+    /*small tablet to big tablet*/
+    @media only screen and (max-width: 1023px) {
+        #header-box {
+            position: absolute;
+            width: 100%;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @keyframes slideLeft {
+            from {
+                transform: translateX(4%);
+            }
+        
+            to {
+                transform: translateX(-4%);
+            }
+        }
+    
+        .adminrow {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+    
+        .section-footer {
+            margin-bottom: 2rem;
+        }
+
+        .wrap {
+            float: right;
+        }
+        
+    }
+    @media only screen and (max-width: 992px){
+        .mainnav li:hover,
+.mainnav li:visited {
+ border-bottom: 2px solid transparent;
+}
+    
+        .center-mobile-view {
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 150%;
+            margin-bottom: 2rem;
+           }
+        
+    }
+    
+    /*small phone to small tablet*/
+    @media only screen and (max-width: 767px) {
+        .mainnav li:hover,
+    .mainnav li:visited {
+     border-bottom: 2px solid transparent;
+    }
+    
+    h1 {
+        font-size: 180%;
+        font-weight: 700;    
+    }
+    
+    .btn:link,
+    .btn:visited,
+    input[type=submit] {
+        margin-top: -2rem;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #fff;
+        padding: 5px 15px;
+    }
+    
+    #header-box {
+        position: absolute;
+        width: 100%;
+        top: 60%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+    }
+    
+    h2 {
+        font-size: 150%;
+        margin-bottom: 2rem;
+       }
+    
+    .center-mobile-view {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .section-about-us h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .aboutp {
+        margin-bottom: 2rem;
+    }
+    .btn-more:link,
+    .btn-more:visited {
+        color: #0259f0;    
+    }
+    
+    .btn-more:hover,
+    .btn-more:active {
+        background-color: #0259f0;
+        color: white;
+    }
+    
+    #team .card  {
+        height: auto;
+        width: 280px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+     .card-body {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .section-testimonial .card .box.back .fa-quote-left {
+        position: absolute;
+        top: 25px;
+        left: 240px;
+        font-size: 3.2rem;
+    }
+    }
+    
+    /*small phone from 480px*/
+    @media only screen and (max-width: 480px) {
+        
+    }

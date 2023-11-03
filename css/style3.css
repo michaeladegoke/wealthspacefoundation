@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*logo*/
+.logo {
+    height: 4rem;
+    width: auto;
+}
+
+html, 
+body {
+    background-color: #fff;
+    color: #050612;
+    font-family: 'Lato', 'Arial', 'Sans'; 
+    font-weight: 400;
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+}
+
+/* background image */
+header {
+    background-image: linear-gradient(rgba(15, 179, 233, 0.872),
+    rgba(4, 39, 100, 0.643)), 
+    url(../uploads/img/admin.jpg);
+    height: 95vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;   
+}
+
+/* header text */
+#header-box {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    
+}
+
+/* header one */
+.col h2 {
+    margin-bottom: 0; /* Remove default margin bottom for h2 */
+}
+
+
+    h2 {
+        color: #fff; /* Change font color to white */
+        text-align: center; /* Center the text */
+        background-color: transparent; /* Background color for better visibility */
+        padding: 10px; /* Add padding for spacing */
+        border-radius: 5px;
+    }
+
+form {
+    background-color: #fff;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: in;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="radio"] {
+    margin: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*logo*/
+.logo {
+    height: 4rem;
+    width: auto;
+}
+
+html, 
+body {
+    background-color: #fff;
+    color: #050612;
+    font-family: 'Lato', 'Arial', 'Sans'; 
+    font-weight: 400;
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+}
+
+/* background image */
+header {
+    background-image: linear-gradient(rgba(15, 179, 233, 0.872),
+    rgba(4, 39, 100, 0.643)),  
+    url(../uploads/img/vision.jpeg);
+    background-position: top;
+    height: 95vh;
+    background-attachment: fixed;
+    background-size: cover;   
+}
+.mynav{
+    background-color: transparent;
+    color: white;
+}
+
+/* Adjusting header box positions */
+#header-box {
+    position: absolute;
+    width: 45%; /* Adjust width as needed */
+    top: 50%; /* Adjust top position as needed */
+    left: 10%; /* Shifting towards the left */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+#header-box2 {
+    position: absolute;
+    width: 30%; /* Adjust width as needed */
+    top: 50%; /* Adjust top position as needed */
+    right: 5%; /* Shifting towards the right */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+
+
+
+/* Sticky */
+.navbar {
+    transition: all 0.3s ease; /* Added for smooth transition */
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(18, 48, 114, 0.409); /* Example box shadow */
+    /* Additional styles as needed */
+}
+
+
+
+/* Styling the program list container */
+#programList {
+    padding: 10px; /* Add padding for inner spacing */
+    border-radius: 5px;
+    width: 70%;
+}
+
+/* Styling for the close button */
+.close-btn {
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    color: red;    
+}
+ .read-more{
+    background: white;
+    border: 1px solid #0259f0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 4px;
+    color:#0259f0;
+    margin-bottom: 3px;
+}
+.program-item .read-more,
+.program-item .close-btn {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+/* Styling for the program items within #programList */
+#programList div {
+    border: 2px solid #ddd; /* Add border to each dynamically added item */
+    padding: 10px; /* Padding for spacing */
+    margin: 10px 0; /* Margin for separation between items */
+    border-radius: 5px;
+    width: 100%;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    animation: blink 10s infinite; /* Blinking animation */
+    transition: transform 0.3s;
+    
+}
+
+#programList div:hover {
+    animation-play-state: paused; /* Pauses the animation on hover */
+    transform: translateY(-10px); /* Example translation on hover */
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Styling for program titles and descriptions */
+#programList div h3, #programList div p {
+    margin: 5px 0; /* Set margins for spacing */
+    color: #fff;
+}
+#programList div h3{
+    font-size: 70%;
+}
+
+#programList div p{
+    font-size: 80%;
+}
+#programList div a{
+    text-decoration: none;
+}
+
+/* Styling for the program images */
+#programList .program-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* header one */
+h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 250%;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    word-spacing: 4px;
+    
+}
+
+/*section*/
+section{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Header two */
+h2 {
+    margin-bottom: 3rem;
+    font-size: 180%;
+    font-weight: 700;
+    word-spacing: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+   }
+
+   h2::after{
+    height: 2px;
+    background-color: #e67e22;
+    display: block;
+    content: "";
+    width: 150px;
+    margin: 15px auto 0 auto;
+
+}
+
+/*nav bar */
+.mainnav li:hover,
+.mainnav li:visited {
+ border-bottom: 2px solid #67bdcc;
+ font-size: 120%;
+}
+
+/* button */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit] {
+    
+    background-color: #cf6d17;
+   
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    border: 1px solid #e67e22;
+    background-color: #e67e22;
+    margin-right: 15px;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover {
+    background-color: #cf6d17;
+    
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #fdfdfd;
+    
+}
+
+.btn-more:link,
+.btn-more:visited {
+    border: 1px solid #0259f0;
+    color: #0259f0;
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin-top: 0;
+    font-weight: 300;
+    border-radius: 10px;
+    
+}
+
+.btn-more:hover,
+.btn-more:active {
+    background-color: #0259f0;
+    color: white;
+}
+
+
+/* about us*/
+.section-about-us p {
+    font-size: 105%;
+    line-height: 160%;
+    font-weight: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: justify;
+}
+.section-about-us h3{
+    padding-left: 1rem;
+}
+
+/* activities Section */
+
+#section-activities{
+    background-image: linear-gradient(rgba(15, 179, 233, 0.872),
+    rgba(4, 39, 100, 0.643)), 
+   url(../uploads/img/corevalue.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#section-activities h2 {
+    color: white;
+    padding-top: 3rem;
+}
+.over{
+    overflow-y: scroll;
+    height: 30vh;
+}
+
+.nowbtn{
+    background-color:#072d6e;
+}
+
+#section-activities .card-title {
+    font-size: 95%;
+    font-weight: 800;
+}
+
+#program {
+  animation: slideLeft 5s linear infinite alternate;
+  padding-bottom: 3rem;
+}
+@keyframes slideLeft {
+    from {
+        transform: translateX(10%);
+    }
+
+    to {
+        transform: translateX(-10%);
+    }
+}
+
+#program:hover {
+    animation-play-state: paused;
+}
+
+#program .card:hover{
+    transform: scale(1.05);
+}
+
+/* team */
+
+
+#team .card:hover {
+    transform: scale(1.10);
+    opacity: 0.5;
+    color: #0259f0;
+}
+
+ #team .card-img-top {
+    object-fit: cover; width: 100%; height: 400px;
+}
+/* testimonial */
+
+.section-testimonial {
+    background-color: #072d6e;
+    padding-bottom: 3rem;
+}
+
+.section-testimonial .card {
+    width: 100%;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+}
+
+
+.section-testimonial .card .box {
+    position: absolute;
+    /*color:#0259f0;*/
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+.section-testimonial .card .box.front{
+    background-image: url(img/pattern.png);
+    background-repeat: repeat;
+}
+.section-testimonial .card .box.front,
+.section-testimonial .card .box.back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-testimonial .card .box.front img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 5px solid #262626;
+	margin-bottom: 25px;
+}
+
+.section-testimonial .card:hover .box.front {
+    transform: rotateY(180deg);
+}
+
+.box.front h4 {
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.socials i {
+	margin: 0 15px;
+}
+.section-testimonial .card .box.back {
+    position: absolute;
+    background: #fff;
+    transform: rotateY(180deg);
+    padding: 10px 10px;
+    text-align: center;
+    user-select: none;
+}
+
+.section-testimonial .card .box.back .fa-quote-left {
+	position: absolute;
+	top: 25px;
+	left: 160px;
+	font-size: 3.2rem;
+}
+
+.section-testimonial .card:hover .box.back {
+    transform: rotateY(360deg);
+}
+
+@media(max-width: 991.5px) {
+    .col-lg-4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+.section-testimonial h2 {
+    color: #fff;
+    padding-top: 3rem;
+}
+.section-testimonial h4 {
+    font-weight: 800;
+    font-size: 90%;
+}
+
+.section-testimonial h4 {
+    border-bottom: 2px solid #e67e22;
+
+}
+
+/*contact section */
+.section-contact{
+    background-color: #d9e1e9;
+    margin-top: -3rem;
+    padding-bottom: 3rem;
+   
+}
+
+.section-contact .form-container {
+    background-color: #fff;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+}
+.section-contact .form-container .table i{
+    color:#072d6e;
+    font-size: 200%;
+    padding-top: 0.5rem;
+    margin-right: 1rem;
+}
+td h5 {
+    font-weight: 800;
+}
+td {
+    line-height: 80%;
+}
+
+.subbox{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem; 
+}
+
+/*footer*/
+
+.section-footer a {
+    color: white;
+    text-decoration: none;
+}
+.section-footer {
+margin-top: -2rem;
+margin-bottom: 0rem;
+}
+.section-footer a:hover {
+background-color: #fff;
+color: #072d6e;
+}
+
+.adminrow {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
