@@ -21,6 +21,17 @@
 
 
     <link rel="icon" type="image/png" href="uploads/img/fav1.png">
+    <!-- If you have different sizes of favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="uploads/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="uploads/img/favicon-16x16.png">
+
+    <!-- For IE browsers -->
+    <link rel="shortcut icon" type="image/x-icon" href="uploads/img/favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/uploads/img/apple-touch-icon.png">
+
+    <meta name="description" content="Wealth Space Foundation: A non-profit organization founded in 2022 by Festus Babatunde Adefemi, dedicated to unlocking the potential within African individuals and communities. Our mission is to bridge the gap between talent and opportunity through skill sponsorship, mentorship, and sustainable development initiatives. Join us in creating a future where everyone can unleash their full potential and contribute to the prosperity of their communities." />
+
 
     <title>Wealth Space Foundation</title>
 </head>
@@ -190,10 +201,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 text-center">
+                    <div class="col-md-6 text-center">
                         <img src="<?php echo $item['img']; ?>" class="mx-auto d-block img-fluid mt-2" alt="About Us">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6 center-mobile-view">
                         <h3><?php echo $item['heading1']; ?></h3>
                         <p><?php echo $item['para1']; ?></p>
                         <h3><?php echo $item['heading2']; ?></h3>
@@ -221,7 +232,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-6 center-mobile-view">
                         <h3><?php echo $item['heading1']; ?></h3>
                         <p><?php echo $item['para1']; ?></p>
                         <h3><?php echo $item['heading2']; ?></h3>
@@ -231,7 +242,7 @@
                         <h3><?php echo $item['heading4']; ?></h3>
                         <p><?php echo $item['para4']; ?></p>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <img src="<?php echo $item['img']; ?>" class="mx-auto d-block img-fluid mt-2" alt="our value">
                     </div>
                 </div>

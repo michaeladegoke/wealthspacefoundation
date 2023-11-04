@@ -12,7 +12,8 @@
   <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
 
   <!-- customized css -->
-  <link rel="stylesheet" href="css/style3.css">
+  <link rel="stylesheet" href="css/styledisplay.css">
+  <link rel="stylesheet" href="css/querries3.css">
 
   <!--font awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,41 +24,10 @@
   <title>Wealth Space Foundation</title>
 
   <link rel="icon" type="image/png" href="uploads/img/favicon.png">
+  <!-- If you have different sizes of favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="uploads/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="uploads/img/favicon-16x16.png">
 
-  <style>
-    table {
-      color: white;
-      /* Change text color to white */
-      border-collapse: collapse;
-      /* Collapse borders to avoid double border lines */
-      width: 100%;
-      /* Adjust width of the table */
-      position: relative;
-    }
-
-    table th,
-    table td {
-      border: 1px solid white;
-      color: white;
-      text-align: center;
-      padding: 8px;
-      position: relative;
-
-    }
-
-
-    table th::after,
-    table td::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: -1px;
-      width: 1px;
-      background: white;
-      z-index: -1;
-    }
-  </style>
 </head>
 
 <body>

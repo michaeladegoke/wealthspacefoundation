@@ -1,0 +1,15 @@
+/*small phone from 480px*/
+@media only screen and (max-width: 480px) {
+    table {
+        font-size: 8px; /* Adjust font size for smaller screens */
+      }
+    
+      table th,
+      table td {
+        padding: 6px; /* Adjust cell padding for smaller screens */
+      }
+
+      .btn-primary {
+        font-size: 10px;
+      }
+}

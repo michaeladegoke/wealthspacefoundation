@@ -73,6 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 
 
     <link rel="icon" type="image/png" href="uploads/img/favicon.png">
+    <!-- If you have different sizes of favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="uploads/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="uploads/img/favicon-16x16.png">
 
     <title>Wealth Space Foundation</title>
 </head>
@@ -90,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
                 <input type="text" id="username" name="username" placeholder="your wsfid"><br><br>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" value="password1"><br><br>
+                <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
 
                 <label>Login as:</label>
                 <input type="radio" id="admin" name="login_type" value="admin">
