@@ -1,6 +1,5 @@
-<?php include 'config/database.php'; ?>
+<?php include 'config/database.php';
 
-<?php
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -10,7 +9,6 @@ if (!isset($_SESSION['username'])) {
 
 $username = $_SESSION['username'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
