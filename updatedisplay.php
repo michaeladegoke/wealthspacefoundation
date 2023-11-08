@@ -57,13 +57,13 @@
           $result = mysqli_query($conn, $sql);
           if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
-              $id = $row['id'];
-              $name = $row['name'];
-              $username = $row['username'];
-              $wits = $row['wits'];
-              $value = $row['value'];
-              $buy = $row['buy'];
-              $withdraw = $row['withdraw'];
+              $id = htmlspecialchars($row['id']);
+              $name = htmlspecialchars($row['name']);
+              $username = htmlspecialchars($row['username']);
+              $wits = htmlspecialchars($row['wits']);
+              $value = htmlspecialchars($row['value']);
+              $buy = htmlspecialchars($row['buy']);
+              $withdraw = htmlspecialchars($row['withdraw']);
               echo '<tr>
         <th scope="row">' . $id . '</th>
         <td>' . $name . '</td>

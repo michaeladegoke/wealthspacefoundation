@@ -83,27 +83,6 @@ $username = $_SESSION['username'];
     </nav>
   </header>
   <?php
-  // $sql = "SELECT * FROM member_table WHERE username = '$username'";
-  // $result = mysqli_query($conn, $sql);
-
-  // if (mysqli_num_rows($result) > 0) {
-  //   while ($row = mysqli_fetch_assoc($result)) {
-  //     $id = $row['id'];
-  //     $image = $row['image'];
-  //     $name = $row['name'];  // Define the $name variable here
-  //     $username = $row['username'];
-  //     $department = $row['department'];
-  //     $wits = $row['wits'];
-  //     $value = $row['value'];
-  //     $withdraw = $row['withdraw'];
-  //     $buy = $row['buy'];
-  //     $login_type = $row['login_type'];
-  //     $password = $row['password'];
-  //   }
-  // }
-  ?>
-
-  <?php
 
   // Prepare a SQL statement with a parameter placeholder
   $sql = "SELECT * FROM member_table WHERE username = ?";

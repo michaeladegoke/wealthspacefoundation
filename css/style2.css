@@ -23,24 +23,35 @@ body {
 }
 
 /* background image */
-header {
-    background-image: linear-gradient(rgba(15, 179, 233, 0.872),
-    rgba(4, 39, 100, 0.643)),
-    url(../uploads/img/equality.jpg);
-    background-position: center;
-    background-attachment: fixed;
+/* header text */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(15, 179, 233, 0.872), rgba(4, 39, 100, 0.643)), url(../uploads/img/equality.jpg);
+    background-position: top;
     height: 95vh;
-    background-size: cover;   
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-/* header text */
-#header-box {
-    position: absolute;
-    width: 100%;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.header-box {
+    z-index: 1; /* Set a z-index to position the text above the navbar */
+    color: #fff; /* Example text color */
 }
+
+
+.navbar {
+    position: fixed; /* Fix the navbar at the top of the viewport */
+    width: 100%; /* Occupy full width of the viewport */
+    top: 0; /* Position it at the top */
+    z-index: 2; /* Set a higher z-index to position the navbar above other content */
+}
+
+
+
 
 /* header one */
 h1 {
@@ -60,19 +71,6 @@ h1 {
 section{
     margin-top: 2rem;
     margin-bottom: 3rem;
-}
-
-.navbar {
-    transition: all 0.3s ease; /* Added for smooth transition */
-}
-
-.navbar.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(18, 48, 114, 0.409); /* Example box shadow */
-    /* Additional styles as needed */
 }
 
 
@@ -106,67 +104,7 @@ h2 {
  font-size: 120%;
 }
 
-/* button */
-.btn:link,
-.btn:visited,
-input[type=submit] {
-    text-decoration: none;
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 30px;
-    transition: background-color 0.5s, border 0.5s, color 0.5s;
-}
 
-.btn:hover,
-.btn:active,
-input[type=submit] {
-    
-    background-color: #cf6d17;
-   
-}
-
-.btn-full:link,
-.btn-full:visited,
-input[type=submit] {
-    border: 1px solid #e67e22;
-    background-color: #e67e22;
-    margin-right: 15px;
-}
-
-.btn-full:hover,
-.btn-full:active,
-input[type=submit]:hover {
-    background-color: #cf6d17;
-    
-}
-
-.btn-ghost:link,
-.btn-ghost:visited {
-    border: 1px solid #e67e22;
-    color: #fdfdfd;
-    
-}
-
-.btn-more:link,
-.btn-more:visited {
-    border: 1px solid #0259f0;
-    color: #0259f0;
-    margin-top: 1rem;
-    font-size: 1rem;
-    margin-top: 0;
-    font-weight: 300;
-    border-radius: 10px;
-    
-}
-
-.btn-more:hover,
-.btn-more:active {
-    background-color: #0259f0;
-    color: white;
-}
 
 .intro p {
     font-size: 105%;

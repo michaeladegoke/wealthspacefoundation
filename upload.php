@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="username" placeholder="your wsfid"><br>
 
                 <label for="password">Password:</label>
-                <input type="password" class="form-control-plaintext" name="password" value="password1" readonly><br>
+                <input type="password" placeholder="Enter your password" name="password"><br>
 
                 <label for="login_type">Login_Type:</label>
                 <input type="text" class="form-control-plaintext" id="readOnlyField" name="login_type" value="member" readonly><br>
@@ -111,10 +111,10 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="department" placeholder="your WSF department"><br>
 
                 <label for="wits">Wits:</label>
-                <input type="text" name="wits" placeholder="Amount of wits"><br>
+                <input type="text" class="form-control-plaintext" name="wits" value="0.00" readonly><br>
 
                 <label for="value">Values:</label>
-                <input type="text" name="value" placeholder="Naira Equivalent"><br>
+                <input type="text" class="form-control-plaintext" name="value" value="0.00" readonly><br>
 
                 <label for="withdraw">Withdraw:</label>
                 <input type="text" class="form-control-plaintext" name="withdraw" value="0.00" readonly><br>

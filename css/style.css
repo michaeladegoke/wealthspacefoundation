@@ -216,7 +216,7 @@ h2 {
 .btn:visited,
 input[type=submit] {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 300;
     color: #fff;
     padding: 10px 30px;
@@ -486,6 +486,7 @@ td {
     padding-top: 1rem;
     padding-left: 2rem;
     padding-right: 2rem; 
+    
 }
 
 /*footer*/
@@ -502,6 +503,17 @@ margin-bottom: 0rem;
 background-color: #fff;
 color: #072d6e;
 }
+
+.section-footer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.section-footer footer {
+    padding: 20px 0;
+}
+
 
 .adminrow {
     padding-bottom: 2rem;

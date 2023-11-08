@@ -116,8 +116,6 @@ $username = $_SESSION['username'];
   }
   ?>
 
-  ?>
-
 
   <section class="adminpanel">
     <div class="container">

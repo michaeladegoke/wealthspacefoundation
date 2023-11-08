@@ -38,14 +38,11 @@
 
 <body>
 
-    <header class="header">
-        <div class="container" id="header-box">
-            <h1>Building a wealthy and <br> healthy community for all</h1>
-        </div>
 
+    <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white" id="navbarContent">
             <div class="container">
-                <a class="navbar-brand" href="index.php"><img src="uploads/img/wsflogo2.png" class="logo"></a>
+                <a class="navbar-brand" href="index.php"><img src="uploads/img/wsflogo2.jpg" class="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -76,8 +73,11 @@
                 </div>
             </div>
         </nav>
-    </header>
 
+        <div class="container header-box">
+            <h1>BUILDING A WEALTHY AND<br>HEALTHY COMMUNITY FOR ALL</h1>
+        </div>
+    </header>
 
     <?php include 'config/database.php'; ?>
 
@@ -254,82 +254,29 @@
 
     <section class="section-footer">
         <footer class="bg-dark text-light text-center py-2">
-            <div class="row justify-content-center adminrow">
-                <div class="col-sm-2">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 text-center">
-                            <div class="row Adminrowinner">
-                                <div class="col">
-                                    <!-- Content for the first row in the left column -->
-                                    <a href="">Teams</a>
-                                </div>
-                            </div>
-                            <div class="row Adminrowinner">
-                                <div class="col">
-                                    <!-- Content for the second row in the left column -->
-                                    <a href="">Subscribe</a>
-                                </div>
-                            </div>
-                            <div class="row Adminrowinner">
-                                <div class="col">
-                                    <!-- Content for the third row in the left column -->
-                                    <a href="">Programs</a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#section-team">Teams</a>
+                        <a href="#subscribe">Subscribe</a>
+                        <a href="#section-activities">Programs</a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#about">About</a>
+                        <a href="#testimonial">Testimonial</a>
+                        <a href="#subscribe">Subscribe</a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-sm-2 text-center">
-                    <div class="row justify-content-center adminrow2">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Content for the first row in the right column -->
-                                    <a href="index.php#">About</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Content for the first row in the right column -->
-                                    <a href="index.php">Testimonial</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Content for the second row in the right column -->
-                                    <a href="index.php">Subscribe</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12">
+                        <p>&copy; 2023 www.wealthspacefoundation.org</p>
                     </div>
                 </div>
-                <div class="col-sm-2 text-center">
-                    <div class="row justify-content-center adminrow2">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Content for the first row in the right column -->
-                                    <a href=""><a href=""><i class="fa fa-facebook"></i></a></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Content for the first row in the right column -->
-                                    <a href=""><a href=""><i class="fa fa-linkedin"></i></a></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Content for the second row in the right column -->
-                                    <a href=""><a href=""><i class="fa fa-instagram"></i></a></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <p>&copy; 2023 www.wealthspacefoundation.org</p>
             </div>
         </footer>
     </section>

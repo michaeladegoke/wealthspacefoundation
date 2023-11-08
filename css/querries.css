@@ -229,16 +229,6 @@ h2 {
  border-bottom: 2px solid transparent;
 }
 
-#header-box2 {
-    position: absolute;
-    width: 100%;
-    top: 90%;
-    left: 17%;
-}
-
-header{
-    height: 130vh;
-}
 h1 {
     font-size: 150%;
 }
@@ -250,17 +240,96 @@ h2 {
     object-fit: cover; width: 100%; height: 400px;
 }
 
+header {
+    height: auto; /* Adjusting the height for smaller screens */
+    padding-top: 20px; /* Adding space at the top for the fixed navbar */
+}
+
+/* Adjusting header box positions for smaller screens */
 #header-box {
-    position: absolute;
-    width: 100%;
-    top: 40%;
-    left: 55%;
-    transform: translate(-50%, -50%);
+    position: static; /* Resetting the position to static for stacking */
+    width: auto; /* Resetting width to adjust automatically */
+    transform: none; /* Resetting the transform */
+    text-align: center; /* Centering content */
+    margin-bottom: 15px; /* Adding some space at the bottom */
+    margin-top: 95px;
 }
 
 #header-box2 {
-    width: 100%;
-    top: 100%;
-    
+    position: static; /* Resetting the position to static for stacking */
+    width: auto; /* Resetting width to adjust automatically */
+    transform: none; /* Resetting the transform */
+    text-align: center; /* Centering content */
+    margin-bottom: 20px; /* Adding some space at the bottom */
+    margin-left: 5rem;
 }
+
+nav.navbar {
+    position: fixed; /* Fix the navbar at the top */
+    width: 100%; /* Take the full width of the screen */
+    top: 0; /* Position at the top of the screen */
+    background-color: white; /* Set the background color */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.9); /* Adding a background to the navbar */
+    border-radius: 5px; /* Providing a slight border-radius for better appearance */
+    margin-top: 10px; /* Adjusting margin for better spacing */
+}
+
+.section-testimonial .card .box.back .fa-quote-left {
+    left: 200px;
+}
+
+.section-contact .form-container .table i{
+    color:#072d6e;
+    font-size: 140%;
+    padding-top: 0.5rem;
+    margin-right: 0;
+}
+
+td h5 {
+    font-weight: 500;
+    font-size: 110%;
+}
+td {
+    line-height: 30%;
+    width: 5%;
+}
+
+
+}
+
+@media only screen and (max-width: 384px){
+
+   h1 {
+        font-size: 130%;
+    }
+
+    h2 {
+        font-size: 110%;
+        word-spacing: 0;
+        letter-spacing: 0.2rem;
+    }
+
+    h2::after{
+        
+        background-color: #e67e22;
+        width: 110px;
+        margin: 15px auto 0 auto;  
+    }
+
+    .section-testimonial .card .box.back .fa-quote-left {
+        left: 150px;
+    }
+    #header-box a.btn {
+        display: block; /* Display as block to accept margin properties */
+        margin-bottom: 40px;
+    } 
+    
+    #header-box2 {
+        margin-top: -20px;
+    }
+   
 }
