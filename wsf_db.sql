@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 03, 2023 at 10:38 AM
+-- Generation Time: Nov 08, 2023 at 02:58 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -168,17 +168,15 @@ INSERT INTO `about_table` (`heading2`, `heading3`, `content`, `content1`, `img`)
 DROP TABLE IF EXISTS `home_table`;
 CREATE TABLE IF NOT EXISTS `home_table` (
   `heading1` text NOT NULL,
-  `heading2` text NOT NULL,
-  `btn1` text NOT NULL,
-  `btn2` text NOT NULL
+  `heading2` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `home_table`
 --
 
-INSERT INTO `home_table` (`heading1`, `heading2`, `btn1`, `btn2`) VALUES
-('BUILDING A WEALTHY AND', 'HEALTHY COMMUNITY FOR ALL', 'Pls Log in', 'Wish To Join');
+INSERT INTO `home_table` (`heading1`, `heading2`) VALUES
+('BUILDING A WEALTHY AND', 'HEALTHY COMMUNITY FOR ALL');
 
 -- --------------------------------------------------------
 
@@ -227,9 +225,10 @@ INSERT INTO `member_table` (`id`, `image`, `name`, `username`, `department`, `wi
 DROP TABLE IF EXISTS `newsletter_table`;
 CREATE TABLE IF NOT EXISTS `newsletter_table` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
+  `name` text NOT NULL,
   `email` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -237,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `newsletter_table` (
 --
 
 INSERT INTO `newsletter_table` (`id`, `name`, `email`) VALUES
-(1, 'michael', 'adegokeolujidemic@gmail.com');
+(1, 'Michael', 'adegokeolujidemic@gmail.com');
 
 -- --------------------------------------------------------
 
