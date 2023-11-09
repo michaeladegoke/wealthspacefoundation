@@ -72,7 +72,7 @@
         <td>' . $value . '</td>
         <td>' . $buy . '</td>
         <td>' . $withdraw . '</td>
-        <td><button class="btn btn-primary"><a href="update.php ? updateid=' . $id . '"
+        <td><button class="btn btn-primary"><a href="update.php?updateid=' . $id . '"
          class="text-light">Update</a></button>
       </tr>';
             }

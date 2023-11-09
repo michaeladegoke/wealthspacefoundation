@@ -102,7 +102,7 @@ $username = $_SESSION['username'];
   if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
       $id = $row['id'];
-      $image = trim($row['image']);
+      $image = $row['image'];
       $name = $row['name'];  // Define the $name variable here
       $username = $row['username'];
       $department = $row['department'];
@@ -132,7 +132,7 @@ $username = $_SESSION['username'];
               <div class="row Adminrowinner">
                 <div class="col">
                   <!-- Content for the second row in the left column -->
-                  <img src="<?php echo $image; ?>" alt="" class="img-fluid rounded-circle">
+                  <img src="<?php echo trim($image); ?>" alt="" class="img-fluid rounded-circle">
                 </div>
               </div>
               <div class="row Adminrowinner">
