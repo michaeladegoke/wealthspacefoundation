@@ -388,7 +388,7 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                         <div class="card mb-3">
                                             <div class="box front">
                                                 <img alt="Mrs kenny" src="<?php echo $item['image6']; ?>">
-                                                <h4><?php echo $item['name6']; ?></h4>
+                                                <h4>Kehinde Adebola</h4>
                                                 <h6><?php echo $item['position6']; ?></h6>
                                                 <p class="socials">
                                                     <a href=""> <i class="fa fa-facebook"></i></a>
@@ -465,7 +465,7 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                         <div class="card mb-3">
                                             <div class="box front">
                                                 <img alt="Member" src="<?php echo $item['image2']; ?>">
-                                                <h4><?php echo $item['name2']; ?></h4>
+                                                <h4>Olumide Joseph</h4>
                                                 <h6><?php echo $item['position2']; ?></h6>
                                                 <p class="socials">
                                                     <a href=""> <i class="fa fa-facebook"></i></a>
@@ -487,7 +487,7 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                         <div class="card mb-3">
                                             <div class="box front">
                                                 <img alt="Miss Peculiar" src="<?php echo $item['image1']; ?>">
-                                                <h4><?php echo $item['name1']; ?></h4>
+                                                <h4>Peculiar Adeleke</h4>
                                                 <h6><?php echo $item['position1']; ?></h6>
                                                 <p class="socials">
                                                     <a href=""> <i class="fa fa-facebook"></i></a>
@@ -524,7 +524,7 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                         <div class="card mb-3">
                                             <div class="box front">
                                                 <img alt="Member" src="<?php echo $item['image2']; ?>">
-                                                <h4><?php echo $item['name2']; ?></h4>
+                                                <h4>Olumide Joseph</h4>
                                                 <h6><?php echo $item['position2']; ?></h6>
                                                 <p class="socials">
                                                     <a href=""> <i class="fa fa-facebook"></i></a>

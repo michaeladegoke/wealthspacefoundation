@@ -57,9 +57,10 @@
             $result2 = mail($from, $subject2, $message2);
 
             if ($result) {
-                echo "<script type='text/javascript'>alert('Thank you, we will get back to you shortly.')</script>";
+
+                echo "<div class='alert'>Thank you, we will get back to you shortly'</div>";
             } else {
-                echo "<script type='text/javascript'>alert('Sorry, submission failed. Please try again later.')</script>";
+                echo "<div class='alert'>Sorry, submission failed. Please try again later.')</div>";
             }
         }
     }
