@@ -102,7 +102,7 @@ $username = $_SESSION['username'];
   if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
       $id = $row['id'];
-      $image = $row['image'];
+      $image = trim($row['image']);
       $name = $row['name'];  // Define the $name variable here
       $username = $row['username'];
       $department = $row['department'];
