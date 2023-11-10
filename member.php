@@ -43,9 +43,12 @@ $username = $_SESSION['username'];
 
   <link rel="apple-touch-icon" sizes="180x180" href="/uploads/img/apple-touch-icon.png">
 
-  <meta name="description" content="Wealth Space Foundation: A non-profit organization founded in 2022 by Festus Babatunde Adefemi, dedicated to unlocking the potential within African individuals and communities. Our mission is to bridge the gap between talent and opportunity through skill sponsorship, mentorship, and sustainable development initiatives. Join us in creating a future where everyone can unleash their full potential and contribute to the prosperity of their communities." />
-
-
+  <meta name="description" content="Wealth Space Foundation: A non-profit organization 
+  founded in 2022 by Festus Babatunde Adefemi, dedicated to unlocking the potential 
+  within African individuals and communities. Our mission is to bridge the gap between 
+  talent and opportunity through skill sponsorship, mentorship, and sustainable 
+  development initiatives. Join us in creating a future where everyone can unleash 
+  their full potential and contribute to the prosperity of their communities." />
   <title>Members dashboard</title>
 </head>
 
@@ -63,19 +66,19 @@ $username = $_SESSION['username'];
               <a class="nav-link active" aria-current="page" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#section-activities">Programs</a>
+              <a class="nav-link" href="index.php#section-activities">Programs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#section-team">Our Team</a>
+              <a class="nav-link" href="index.php#section-team">Our Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#testimonial">Testimonial</a>
+              <a class="nav-link" href="index.php#testimonial">Testimonial</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Us</a>
+              <a class="nav-link" href="index.php#contact">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#subscribe">Subscribe</a>
+              <a class="nav-link" href="index.php#subscribe">Subscribe</a>
             </li>
           </ul>
         </div>

@@ -2,6 +2,25 @@
 <html>
 
 <head>
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/png" href="uploads/img/fav1.png">
+
+    <!-- If you have different sizes of favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="uploads/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="uploads/img/favicon-16x16.png">
+
+    <!-- For IE browsers -->
+    <link rel="shortcut icon" type="image/x-icon" href="uploads/img/favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/uploads/img/apple-touch-icon.png">
+
     <style>
         body {
             display: flex;

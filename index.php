@@ -671,24 +671,26 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <a href="#section-team">Teams</a>
-                            <a href="#subscribe">Subscribe</a>
+                            <a href="#section-team">Teams |</a>
+                            <a href="#subscribe">Subscribe |</a>
                             <a href="#section-activities">Programs</a>
                         </div>
                         <div class="col-sm-4">
-                            <a href="#about">About</a>
-                            <a href="#testimonial">Testimonial</a>
+                            <a href="#about">About |</a>
+                            <a href="#testimonial">Testimonial |</a>
                             <a href="#subscribe">Subscribe</a>
                         </div>
                         <div class="col-sm-4">
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                            <a href=""><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/wealthspaceofficial "><i class="fa fa-facebook"></i> |</a>
+                            <a href="https://www.linkedin.com/events/championinggreentechnology7121422069094830081"><i class="fa fa-linkedin"></i> |</a>
+                            <a href="https://www.instagram.com/wealthspaceofficial"><i class="fa fa-instagram"></i> |</a>
+                            <a href="https://t.me/+tNjyeOb-n-01OThk"><i class="fa fa-telegram"></i> |</a>
+                            <a href="https://www.x.com/wealthsofficial"><i class="fa fa-times"></i></a>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-12">
-                            <p>&copy; 2023 www.wealthspacefoundation.org</p>
+                            <p>&copy; 2023 www.wsfafrica.org</p>
                         </div>
                     </div>
                 </div>

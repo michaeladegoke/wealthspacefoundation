@@ -116,19 +116,19 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
                             <a class="nav-link active" aria-current="page" href="about.php">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#section-activities">Programs</a>
+                            <a class="nav-link" href="index.php#section-activities">Programs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#section-team">Our Team</a>
+                            <a class="nav-link" href="index.php#section-team">Our Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#testimonial">Testimonial</a>
+                            <a class="nav-link" href="index.php#testimonial">Testimonial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact Us</a>
+                            <a class="nav-link" href="index.php#contact">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#subscribe">Subscribe</a>
+                            <a class="nav-link" href="index.php#subscribe">Subscribe</a>
                         </li>
                     </ul>
                 </div>
