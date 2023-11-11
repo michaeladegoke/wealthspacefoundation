@@ -40,7 +40,7 @@ if (isset($_GET['updateid'])) {
             $stmt->execute();
 
             if ($stmt) {
-                header('Location: admin.php');
+                header('Location: updatedisplay.php');
                 exit(); // Ensure script execution stops after redirection
             } else {
                 die("Update failed: " . $conn->error);
@@ -63,7 +63,7 @@ if (isset($_GET['updateid'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="css/updatequerries.css">
     <title>CRUD Operation</title>
 </head>
 

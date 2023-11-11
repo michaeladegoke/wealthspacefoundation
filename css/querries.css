@@ -433,12 +433,5 @@ td {
     #header-box a.btn {
         display: block; /* Display as block to accept margin properties */
         margin-bottom: 40px;
-    } 
-    
-    #header-box2 {
-        margin-top: -20px;
-        width: 110%;
-        margin-left: 2.5rem;
-    }
-   
+    }    
 }

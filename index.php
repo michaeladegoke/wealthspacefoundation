@@ -58,7 +58,7 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="container" id="header-box">
                     <h1><?php echo $item['heading1']; ?> <br> <?php echo $item['heading2']; ?></h1>
                     <a class="btn btn-full" href="login.php">Login as a member</a>
-                    <a class="btn btn-ghost" href="#contact">Request to join</a>
+                    <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSeuXjF-N577ddrazO_6wrJBtVAPOzF4mRNg_PVgEECtVWxZ_A/viewform?usp=pp_url">Request to join</a>
                 </div>
                 <div class="container" id="header-box2">
                     <div id="programList"></div>
