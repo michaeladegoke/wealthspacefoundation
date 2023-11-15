@@ -1,5 +1,6 @@
 <?php
 include 'config/database.php';
+
 $message = "";
 
 if (isset($_POST['submit'])) {
@@ -28,23 +29,30 @@ if (isset($_POST['submit'])) {
     }
 
     if (!empty($_FILES['upload']['name']) && in_array($file_ext, $allow_ext) && $file_size <= 2 * 1024 * 1024) {
-
         $name = htmlspecialchars($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
         $username = htmlspecialchars($_POST['username']);
-        $password = htmlspecialchars($_POST['password']);
+
+        // Get the raw password from the form
+        $rawPassword = htmlspecialchars($_POST['password']);
+
+        // Hash the password
+        $passwordHash = password_hash($rawPassword, PASSWORD_DEFAULT);
+
         $login_type = htmlspecialchars($_POST['login_type']);
         $department = htmlspecialchars($_POST['department']);
         $wits = htmlspecialchars($_POST['wits']);
         $value = htmlspecialchars($_POST['value']);
         $buy = htmlspecialchars($_POST['buy']);
         $withdraw = htmlspecialchars($_POST['withdraw']);
-        if (empty($name) || empty($username) || empty($department) || empty($wits) || empty($value)) {
+
+        if (empty($name) || empty($email) || empty($username) || empty($department) || empty($wits) || empty($value)) {
             $message = '<p style="color:red">Please fill in all the required fields</p>';
         } else {
             // Corrected SQL query and bind_param
-            $insertQuery = "INSERT INTO member_table (image, name, username, password, login_type, department, wits, value, buy, withdraw) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $insertQuery = "INSERT INTO member_table (image, name, email, username, password, login_type, department, wits, value, buy, withdraw) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($insertQuery);
-            $stmt->bind_param("ssssssssss", $target_dir, $name, $username, $password, $login_type, $department, $wits, $value, $buy, $withdraw);
+            $stmt->bind_param("sssssssssss", $target_dir, $name, $email, $username, $passwordHash, $login_type, $department, $wits, $value, $buy, $withdraw);
 
             // Execute the insertion and check for success
             if ($stmt->execute()) {
@@ -56,10 +64,7 @@ if (isset($_POST['submit'])) {
         }
     }
 }
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +86,6 @@ if (isset($_POST['submit'])) {
     <!--fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-
     <link rel="icon" type="image/png" href="uploads/img/favicon.png">
 
     <title>Wealth Space Foundation</title>
@@ -95,8 +99,11 @@ if (isset($_POST['submit'])) {
                 <label for="upload">Image:</label>
                 <input type="file" name="upload" placeholder="your wsfid"><br><br>
 
-                <label for="username">Name:</label>
+                <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="your name"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" placeholder="Enter your email" name="email">
 
                 <label for="username">Username:</label>
                 <input type="text" name="username" placeholder="your wsfid"><br>
@@ -118,11 +125,11 @@ if (isset($_POST['submit'])) {
 
                 <label for="withdraw">Withdraw:</label>
                 <input type="text" class="form-control-plaintext" name="withdraw" value="0.00" readonly><br>
+
                 <label for="buy">Buy:</label>
                 <input type="text" class="form-control-plaintext" name="buy" value="0.00" readonly><br>
 
                 <input type="submit" value="submit" name="submit"><br>
-
             </form>
         </div>
 
@@ -157,6 +164,7 @@ if (isset($_POST['submit'])) {
             </div>
         </nav>
     </header>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>

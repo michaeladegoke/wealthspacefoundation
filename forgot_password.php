@@ -1,55 +1,41 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-    //$conn = mysqli_connect("localhost", "root", "secret", "wsf_db");
     require 'config/database.php';
 
     if (isset($_POST['submit'])) {
-        $errors = "";
-
-        // Check if "login_type" is set in the POST data
-        if (isset($_POST['login_type'])) {
-            $login_type = (isset($_POST['login_type'])) ? mysqli_real_escape_string($conn, $_POST['login_type']) : '';
-        } else {
-            // Handle the case where "login_type" is not set
-            $errors = "Please select a login type.";
-        }
-
         $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $password = htmlspecialchars($_POST['password']);
 
-        if (empty($username) || empty($password) || empty($login_type)) {
-            $errors = "Invalid inputs!";
+        // Check if the username exists in the database
+        $query = mysqli_prepare($conn, "SELECT * FROM member_table WHERE username = ?");
+        mysqli_stmt_bind_param($query, "s", $username);
+        mysqli_stmt_execute($query);
+        $result = mysqli_stmt_get_result($query);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            $resetToken = bin2hex(random_bytes(32)); // Generate a random token
+
+            // Store the token in the database with the user's record for verification
+            $updateTokenQuery = mysqli_prepare($conn, "UPDATE member2_table SET reset_token = ? WHERE username = ?");
+            mysqli_stmt_bind_param($updateTokenQuery, "ss", $resetToken, $username);
+            mysqli_stmt_execute($updateTokenQuery);
+
+            // Generate the password reset link with the token
+            $resetLink = "http://localhost/WSF/reset_password.php?token=$resetToken"; // Replace with your actual domain and reset password page
+
+            // Display the reset link to the user
+            echo "Password reset link: <a href='$resetLink'>$resetLink</a>";
+
+            // Optionally, you can also redirect the user to the reset link automatically
+            // header("Location: $resetLink"); // Redirect to the reset password page
+            // exit();
         } else {
-            $query = mysqli_prepare($conn, "SELECT username, login_type, password FROM member_table WHERE username = ?");
-            mysqli_stmt_bind_param($query, "s", $username);
-            mysqli_stmt_execute($query);
-            $result = mysqli_stmt_get_result($query);
-
-            if ($result && mysqli_num_rows($result) > 0) {
-                $data = mysqli_fetch_assoc($result);
-                $hashedPassword = $data['password'];
-
-                // Verify the password
-                if (password_verify($password, $hashedPassword) && $login_type === $data['login_type']) {
-                    // Successful login
-                    session_start();
-                    $_SESSION['username'] = $username;
-
-                    if ($data['login_type'] === "admin") {
-                        header("Location: admin.php");
-                    } elseif ($data['login_type'] === "member") {
-                        header("Location: member.php");
-                    }
-                } else {
-                    $errors = "Invalid Login type or password doesn't match";
-                }
-            } else {
-                $errors = "Username does not exist";
-            }
+            $errors = "Username not found!";
         }
     }
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,33 +64,20 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     <link rel="icon" type="image/png" sizes="32x32" href="uploads/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="uploads/img/favicon-16x16.png">
 
-    <title>Wealth Space Foundation</title>
+    <title>Forgot Password</title>
 </head>
 
 <body>
 
     <header>
+
         <div class="container" id="header-box">
-            <h2>Login</h2>
+            <h2>Forgot Password</h2>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                <p style="color:red"><?php if (isset($_POST['submit'])) {
-                                            echo $errors . "<br>";
-                                        } ?></p>
+                <p style="color: red;"><?php if (isset($errors)) echo $errors; ?></p>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="your wsfid"><br><br>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
-
-                <label>Login as:</label>
-                <input type="radio" id="admin" name="login_type" value="admin">
-                <label for="admin">Admin</label>
-                <input type="radio" id="member" name="login_type" value="member">
-                <label for="member">Member</label><br><br>
-                <input type="submit" value="Login" name="submit">
-                <a href="forgot_password.php">Forgot Password?</a>
-                <a href="forgot_password.php">Change Password?</a>
-
+                <input type="text" id="username" name="username" placeholder="Enter your username"><br><br>
+                <input type="submit" value="Submit" name="submit">
             </form>
         </div>
 

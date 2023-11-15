@@ -64,7 +64,7 @@ if (isset($_GET['updateid'])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/updatequerries.css">
-    <title>CRUD Operation</title>
+    <title>Update</title>
 </head>
 
 <body>
@@ -80,11 +80,11 @@ if (isset($_GET['updateid'])) {
             </div>
             <div class="form-group">
                 <label>Wits</label>
-                <input type="" name="wits" class="form-control" value="<?php echo $wits; ?>">
+                <input type="" name="wits" id="witsInput" class="form-control" value="<?php echo $wits; ?>">
             </div>
             <div class="form-group">
                 <label>Value</label>
-                <input type="text" name="value" class="form-control" value="<?php echo $value; ?>">
+                <input type="text" name="value" id="valueInput" class="form-control" value="<?php echo $value; ?>">
             </div>
             <div class="form-group">
                 <label>withdraw</label>
@@ -98,6 +98,8 @@ if (isset($_GET['updateid'])) {
         </form>
     </div>
 
+
+    <script src="script3.js"></script>
 </body>
 
 </html>

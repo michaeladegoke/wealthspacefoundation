@@ -155,12 +155,14 @@ $username = $_SESSION['username'];
           <div class="row justify-content-center adminrow2">
             <div class="col-md-6">
               <div class="row">
+                <label>Wits Balance:</label>
                 <div class="col">
                   <!-- Content for the first row in the right column -->
                   <a class="btn btn-more" href="about.php"><?php echo '<tr><td>' . $wits . '<td></tr>'; ?></a>
                 </div>
               </div>
               <div class="row">
+                <label>Naira Equivalent</label>
                 <div class="col">
                   <!-- Content for the first row in the right column -->
                   <a class="btn btn-more" href="about.php"><?php echo '<tr><td>' . $value . '<td></tr>'; ?></a>
@@ -169,13 +171,13 @@ $username = $_SESSION['username'];
               <div class="row">
                 <div class="col">
                   <!-- Content for the second row in the right column -->
-                  <a class="btn btn-more" href=""><?php echo '<tr><td>' . $withdraw . '<td></tr>'; ?></a>
+                  <a class="btn btn-more" href="">Withdraw</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
                   <!-- Content for the fourth row in the left column -->
-                  <a class="btn btn-more" href=""><?php echo '<tr><td>' . $buy . '<td></tr>'; ?></a>
+                  <a class="btn btn-more" href="">Buy</a>
                 </div>
               </div>
               <div class="row">

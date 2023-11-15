@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 08, 2023 at 02:58 PM
+-- Generation Time: Nov 15, 2023 at 02:48 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -188,33 +188,29 @@ DROP TABLE IF EXISTS `member_table`;
 CREATE TABLE IF NOT EXISTS `member_table` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
   `image` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `username` int(255) NOT NULL,
-  `department` text NOT NULL,
-  `wits` int(255) NOT NULL,
-  `value` varchar(2500) NOT NULL,
-  `withdraw` varchar(2500) NOT NULL,
-  `buy` varchar(2500) NOT NULL,
-  `login_type` text NOT NULL,
+  `name` text NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `login_type` text NOT NULL,
+  `department` text NOT NULL,
+  `wits` varchar(255) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  `buy` varchar(255) NOT NULL,
+  `withdraw` varchar(255) NOT NULL,
+  `reset_token` varchar(2500) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+  UNIQUE KEY `username` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `member_table`
 --
 
-INSERT INTO `member_table` (`id`, `image`, `name`, `username`, `department`, `wits`, `value`, `withdraw`, `buy`, `login_type`, `password`) VALUES
-(1, 'uploads/img/team /papa.jpg', 'Festus Babafemi', 220801, 'President', 84, '#3,360.00', '#5000', '0.00', 'admin', 'password1'),
-(2, 'uploads/img/team/peculiar.jpg', 'Adeleke Peculiar', 220601, 'Finacial Manager', 84, '#3,360.00', '0.00', '0.00', 'admin', 'password1'),
-(3, 'uploads/img/team/mary.jpg', 'Mary Makinde', 220701, 'Executive Manager', 69, '#2,440.00', '0.00', '0.00', 'member', 'password1'),
-(4, 'uploads/img/team/fola.jpg', 'Habeebat Lawal', 220403, 'planning Manager', 86, '#3,440000', '#25,000', '6789', 'member', 'password1'),
-(5, 'uploads/img/team/seun.jpg', 'Adekunle Oluwaseun', 220202, 'Creativity Manager', 50, '#2,000', '0.00', '0.00', 'member', 'password1'),
-(6, 'uploads/img/team/john.jpg', 'John Ayetelure', 220108, 'Operation Manager', 56, '#2,220', '0.00', '0.00', 'member', 'password1'),
-(7, 'uploads/PASPORTNBG.jpg', 'Michael Olujide', 220102, 'Creativity Department', -11, '(440)', '0.00', '0.00', 'member', 'password1'),
-(8, 'uploads/DSC_0024.jpg', 'Ben', 123456, 'cretivity', 67, '5678', '0.00', '0.00', 'member', 'password1');
+INSERT INTO `member_table` (`id`, `image`, `name`, `email`, `username`, `password`, `login_type`, `department`, `wits`, `value`, `buy`, `withdraw`, `reset_token`) VALUES
+(1, 'uploads/mypassport2desktop.jpg', 'Michael Olujide', 'adegokeolujidemic@gmail.com', '220102', '$2y$10$0nFNMNU8S1v3YEmgTKAhROjS7hVrcHwTbAm8vdvXpKyNTv5hrlAJG', 'member', 'Creativity', '6', '240', '0.00', '0.00', '3c1c71b6e6cb51ea5af4b15144eb827b209a2e9f1602ac9ab8e3042221b349de'),
+(2, 'uploads/papa.jpg', 'Festus Adefemi', 'Fb.adefemi@gmail.com', '220801', '$2y$10$Ef2fJBFYe5F.570hcaUq6.2pwzvme/5Csk8eyqdYH9rwCNB5zkTdO', 'admin', 'President', '-11', '-440', '0.00', '0.00', ''),
+(3, 'uploads/peculiar.jpg', 'Peculiar Adeleke', 'Adelekepeculiar514@gmail.com', '220601', '$2y$10$HMEXNx.QwVfgxyYdsy5Xv.C.X2yEy6xjoqY.vGfnMHqAzhsyiCGHy', 'admin', 'Finance Director', '58', '2340', '0.00', '0.00', '');
 
 -- --------------------------------------------------------
 
@@ -229,14 +225,16 @@ CREATE TABLE IF NOT EXISTS `newsletter_table` (
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `newsletter_table`
 --
 
 INSERT INTO `newsletter_table` (`id`, `name`, `email`) VALUES
-(1, 'Michael', 'adegokeolujidemic@gmail.com');
+(1, 'Michael', 'adegokeolujidemic@gmail.com'),
+(2, 'micheal', 'adegokeolujidem@gmail.com'),
+(3, 'micheal', 'adegokeolujidemlhjui@gmail.com');
 
 -- --------------------------------------------------------
 
