@@ -14,13 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
         if ($result && mysqli_num_rows($result) > 0) {
             $resetToken = bin2hex(random_bytes(32)); // Generate a random token
 
-            // Store the token in the database with the user's record for verification
-            $updateTokenQuery = mysqli_prepare($conn, "UPDATE member2_table SET reset_token = ? WHERE username = ?");
+            // Update the token in the member_table for the specific user
+            $updateTokenQuery = mysqli_prepare($conn, "UPDATE member_table SET reset_token = ? WHERE username = ?");
             mysqli_stmt_bind_param($updateTokenQuery, "ss", $resetToken, $username);
             mysqli_stmt_execute($updateTokenQuery);
 
             // Generate the password reset link with the token
-            $resetLink = "http://localhost/WSF/reset_password.php?token=$resetToken"; // Replace with your actual domain and reset password page
+            // $resetLink = "http://localhost/WSF/reset_password.php?token=$resetToken"; // Replace with your actual domain and reset password page
+            $resetLink = "https://wsfafrica.org/reset_password.php?token=$resetToken";
 
             // Display the reset link to the user
             echo "Password reset link: <a href='$resetLink'>$resetLink</a>";
@@ -30,10 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             // exit();
         } else {
             $errors = "Username not found!";
+            // Handle the error - display a message or redirect to an error page
+            // Example: echo $errors;
         }
     }
 }
 ?>
+
 
 
 
