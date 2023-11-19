@@ -20,8 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             mysqli_stmt_execute($updateTokenQuery);
 
             // Generate the password reset link with the token
-            // $resetLink = "http://localhost/WSF/reset_password.php?token=$resetToken"; // Replace with your actual domain and reset password page
-            $resetLink = "https://wsfafrica.org/reset_password.php?token=$resetToken";
+            //$resetLink = "http://localhost/WSF/reset_password.php?token=$resetToken"; // Replace with your actual domain and reset password page
+            // $resetLink = "https://wsfafrica.org/reset_password.php?token=$resetToken";
+            $resetLink = "https://www.wsfafrica.org/reset_password.php?token=$resetToken";
+
 
             // Display the reset link to the user
             echo "Password reset link: <a href='$resetLink'>$resetLink</a>";

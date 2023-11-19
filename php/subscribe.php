@@ -47,8 +47,8 @@
             exit();
         }
 
-        require 'C:\wamp64\www\WSF\config/database.php';
-
+        //require 'C:\wamp64\www\WSF\config/database.php';
+        require '../config/database.php';
         // Insert the subscriber into the database
         $sql = "INSERT INTO newsletter_table (name, email) VALUES ('$name', '$email')";
 
