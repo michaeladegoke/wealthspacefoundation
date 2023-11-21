@@ -597,7 +597,7 @@ $home = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                         <h3>Send Us Mail</h3>
                                     </div>
                                 </div>
-                                <form class="row g-3" method="post" action="php/send_mail3.php">
+                                <form class="row g-3" method="post" action="php/send2.php">
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" placeholder="Enter your name" name="name">
                                     </div>
